@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html>
 
@@ -11,6 +12,8 @@
     <link href="assets/fonts/fontawesome-all.min.css" rel="stylesheet">
     <link href="assets/fonts/ionicons.min.css" rel="stylesheet">
     <link href="assets/css/Footer-Basic.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -106,119 +109,215 @@
                 </div>
                 <center>
                     <div class="row" style="width: 1362px;">
+                     
                         <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-orange);">Evolution des
-                                        cas
-                                        confirmés&nbsp;</h6>
-                                    <div class="dropdown no-arrow">
-                                        <button aria-expanded="false" class="btn btn-link btn-sm dropdown-toggle"
-                                                data-bs-toggle="dropdown" type="button"><i
-                                                class="fas fa-ellipsis-v text-gray-400"></i></button>
-                                        <div class="dropdown-menu shadow dropdown-menu-end animated--fade-in">
-                                            <p class="text-center dropdown-header">dropdown header:</p><a
-                                                class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item"
-                                                                                                  href="#">&nbsp;Another
-                                            action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">&nbsp;Something else here</a>
-                                        </div>
-                                    </div>
+                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-orange);">Evolution des cas confirmés&nbsp;</h6>
+                       
                                 </div>
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas>
-                                    </div>
+                                        <canvas id="myChart1" ></canvas></div>
+                                    <script>
+                                        var ctx = document.getElementById('myChart1').getContext('2d');
+
+                                        var myChart1 = new Chart(ctx, {
+                                            type: 'line',
+                                            data: {
+                                                labels: ['5/16/21', '5/17/21', '5/18/21', '5/19/21', '5/20/21', '5/21/21'],
+                                                datasets: [{
+                                                    pointRadius: 4,
+                                                    label: ' Cas ',
+                                                    data: [  479016 , 245100, 479016,245100, 479016],
+                                                    backgroundColor: [
+                                                        'rgba(15, 99, 132, 1)'
+                                                    ],
+                                                    borderColor: [
+                                                        'rgba(15, 99, 132, 1)'
+                                                    ],
+                                                    borderWidth: 1,
+
+
+                                                }]
+                                            },
+                                            options: {
+                                                legend: {display: false},
+                                                scales: {
+                                                    y: {
+                                                        beginAtZero: false
+                                                    }
+                                                }
+                                            }
+                                        });
+
+                                        /*        function addvalue(){
+                                                    chart.data.labels.push(" bananaa");
+                                                    chart.update();
+                                                }*/
+                                    </script>
                                 </div>
                             </div>
                         </div>
                         <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-green);">Evolution des
-                                        cas
-                                        guéris</h6>
-                                    <div class="dropdown no-arrow">
-                                        <button aria-expanded="false" class="btn btn-link btn-sm dropdown-toggle"
-                                                data-bs-toggle="dropdown" type="button"><i
-                                                class="fas fa-ellipsis-v text-gray-400"></i></button>
-                                        <div class="dropdown-menu shadow dropdown-menu-end animated--fade-in">
-                                            <p class="text-center dropdown-header">dropdown header:</p><a
-                                                class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item"
-                                                                                                  href="#">&nbsp;Another
-                                            action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">&nbsp;Something else here</a>
-                                        </div>
-                                    </div>
+                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-green);">Evolution des cas guéris</h6>
+                                   
                                 </div>
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas>
-                                    </div>
+                                        <canvas id="myChart2" ></canvas></div>
+                                        <script>
+                                            var ctx = document.getElementById('myChart2').getContext('2d');
+                                            
+                                    
+                                            var myChart2 = new Chart(ctx, {
+                                                type: 'line',
+                                                data: {
+                                                    labels: ['5/16/21', '5/17/21', '5/18/21', '5/19/21', '5/20/21', '5/21/21'],
+                                                    datasets: [{
+                                                        pointRadius: 4,
+                                                        label: ' Guéris ',
+                                                        data: [83, 90, 83, 90, 83],
+                                                        backgroundColor: [
+                                                        'rgba(15, 99, 132, 1)'                                                    
+                                                        ],
+                                                        borderColor: [
+                                                        'rgba(15, 99, 132, 1)'                                                        
+                                                        ],
+                                                        borderWidth: 1,
+                                                       
+                                                
+                                                    }]
+                                                },
+                                                options: {
+                                                    legend: {display: false},
+                                                    scales: {
+                                                        y: {
+                                                            beginAtZero: true
+                                                        }
+                                                    }
+                                                }
+                                            });
+                                    
+                                    /*        function addvalue(){
+                                                chart.data.labels.push(" bananaa");
+                                                chart.update();
+                                            }*/
+                                            </script>
                                 </div>
                             </div>
                         </div>
                         <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-red);">Evolution des
-                                        décès&nbsp;</h6>
-                                    <div class="dropdown no-arrow">
-                                        <button aria-expanded="false" class="btn btn-link btn-sm dropdown-toggle"
-                                                data-bs-toggle="dropdown" type="button"><i
-                                                class="fas fa-ellipsis-v text-gray-400"></i></button>
-                                        <div class="dropdown-menu shadow dropdown-menu-end animated--fade-in">
-                                            <p class="text-center dropdown-header">dropdown header:</p><a
-                                                class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item"
-                                                                                                  href="#">&nbsp;Another
-                                            action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">&nbsp;Something else here</a>
-                                        </div>
-                                    </div>
+                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-red);">Evolution des décès&nbsp;</h6>
+                                    
                                 </div>
                                 <div class="card-body">
                                     <div class="chart-area" style="border-color: var(--bs-blue);">
-                                        <canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas>
-                                    </div>
+                                        <canvas id="myChart3" ></canvas></div>
+                                        <script>
+                                            var ctx = document.getElementById('myChart3').getContext('2d');
+                                            
+                                    
+                                            var myChart3 = new Chart(ctx, {
+                                                type: 'line',
+                                                data: {
+                                                    labels: ['5/16/21', '5/17/21', '5/18/21', '5/19/21', '5/20/21', '5/21/21'],
+                                                    datasets: [{
+                                                        pointRadius: 4,
+                                                        label: ' Deces ',
+                                                        data:  [ 46, 40, 46, 40, 46 ],
+                                                        backgroundColor: [
+                                                        'rgba(15, 99, 132, 1)'                                                    
+                                                        ],
+                                                        borderColor: [
+                                                        'rgba(15, 99, 132, 1)'                                                        
+                                                        ],
+                                                        borderWidth: 1,
+                                                       
+                                                
+                                                    }]
+                                                },
+                                                options: {
+                                                    legend: {display: false},
+                                                    scales: {
+                                                        y: {
+                                                            beginAtZero: false
+                                                        }
+                                                    }
+                                                }
+                                            });
+                                    
+                                    /*        function addvalue(){
+                                                chart.data.labels.push(" bananaa");
+                                                chart.update();
+                                            }*/
+                                            </script>
                                 </div>
                             </div>
                         </div>
                         <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0"
-                                        style="background: var(--bs-white);color: var(--bs-dark);">Evolution des
-                                        personnes
-                                        ayant recu le vaccin&nbsp;</h6>
-                                    <div class="dropdown no-arrow">
-                                        <button aria-expanded="false" class="btn btn-link btn-sm dropdown-toggle"
-                                                data-bs-toggle="dropdown" type="button"><i
-                                                class="fas fa-ellipsis-v text-gray-400"></i></button>
-                                        <div class="dropdown-menu shadow dropdown-menu-end animated--fade-in">
-                                            <p class="text-center dropdown-header">dropdown header:</p><a
-                                                class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item"
-                                                                                                  href="#">&nbsp;Another
-                                            action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">&nbsp;Something else here</a>
-                                        </div>
-                                    </div>
+                                    <h6 class="text-primary fw-bold m-0" style="background: var(--bs-white);color: var(--bs-dark);">Evolution des personnes ayant recu le vaccin&nbsp;</h6>
+                                   
                                 </div>
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas>
-                                    </div>
+                                        <canvas id="myChart4" ></canvas></div>
+                                        <script>
+                                            var ctx = document.getElementById('myChart4').getContext('2d');
+                                            
+                                    
+                                            var myChart4 = new Chart(ctx, {
+                                                type: 'line',
+                                                data: {
+                                                    labels: ['5/16/21', '5/17/21', '5/18/21', '5/19/21', '5/20/21', '5/21/21'],
+                                                    datasets: [{
+                                                        pointRadius: 4,
+                                                        label: ' Vaccinees ',
+                                                        data: [ 11001373 , 11349546, 11703585,12015720, 12015720],
+                                                        backgroundColor: [
+                                                            'rgba(15, 99, 132, 1)'
+                                                    
+                                                        ],
+                                                        borderColor: [
+                                                            'rgba(15, 99, 132, 1)',
+                                                        
+                                                        ],
+                                                        borderWidth: 1,
+                                                       
+                                                
+                                                    }]
+                                                },
+                                                options: {
+                                                    legend: {display: false},
+                                                    scales: {
+                                                        y: {
+                                                            beginAtZero: false
+                                                        }
+                                                    }
+                                                }
+                                            });
+                                    
+                                    /*        function addvalue(){
+                                                chart.data.labels.push(" bananaa");
+                                                chart.update();
+                                            }*/
+                                            </script>
                                 </div>
                             </div>
                         </div>
+                   
+                    </div>
                 </center>
             </div>
         </div>
     </div>
-</div>
+
 <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
 </div>
 <h3 class="text-dark mb-0" style="text-align: center;padding: 10px;"><strong>Tableau de répartitions des cas par
