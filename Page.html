@@ -5,20 +5,33 @@
     <title>Title</title>
 </head>
 <body>
-<script src="JS.js">
-    GetDataFromAPI().then(data => {
-        InitialiseVariables(data)
-    }).then(() => {
-        GenerateSelectMenu("select_Date", StatsDates)
-    });
-</script>
+<div>
+    <h1>General Stats: </h1>
+    <ul>
+        <li id="Cases_Total">Total Cases: </li>
+        <li id="Recoveries_Total">Total Recoveries: </li>
+        <li id="Deaths_Total">Total Deaths: </li>
+    </ul>
+    </div>
+<script src="JS.js"></script>
 <script src="HTMLGenerator.js"></script>
+<button onclick="GetStats_PerDay(document.getElementById('select_Date').value, document.getElementById('select_Region').value)">Update</button>
 
-<button onclick="GetDeaths_PerDay('28/05/2021')">Get Deaths</button>
-<h3>Deaths Sum : </h3>
-<h6 id="deaths_Sum"></h6>
-<p id="deaths"></p>
-
+<div>
+    <h2>Cases</h2>
+    <h6 id="Cases_Sum"></h6>
+    <p id="Cases"></p>
+</div>
+<div>
+    <h2>Recoveries</h2>
+    <h6 id="Recoveries_Sum"></h6>
+    <p id="Recoveries"></p>
+</div>
+<div>
+    <h2>Deaths</h2>
+    <h6 id="Deaths_Sum"></h6>
+    <p id="Deaths"></p>
+</div>
 
 </body>
 </html>
