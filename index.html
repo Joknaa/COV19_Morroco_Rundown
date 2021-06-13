@@ -3,1222 +3,880 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
     <title>Dashboard - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+    <link href="assets/fonts/fontawesome-all.min.css" rel="stylesheet">
+    <link href="assets/fonts/ionicons.min.css" rel="stylesheet">
+    <link href="assets/css/Footer-Basic.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
-    <div id="wrapper">
-        <div class="d-flex flex-column" id="content-wrapper">
-            <div id="content">
-                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
-                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button><img src="assets/img/morocco(1).png">
-                        <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
-                            <div class="input-group"></div>
-                        </form><img src="assets/img/covid-19.png">
-                    </div>
-                </nav>
+<div id="wrapper">
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
                 <div class="container-fluid">
-                    <div class="d-sm-flex justify-content-between align-items-center mb-4" style="text-align: center;margin: 0px 400px 24px;">
-                        <h3 class="text-dark mb-0" style="text-align: center;"><strong>COVID-19 : tableau de bord de l’épidémie en chiffres - Maroc</strong><br></h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow border-start-info py-2" style="background: rgb(255, 204, 128);">
-                                <div class="card-body">
-                                    <div class="row align-items-center no-gutters">
-                                        <div class="col me-2">
-                                            <div class="text-uppercase text-info fw-bold text-xs mb-1"><span style="color: var(--bs-dark);">cas confirmés&nbsp;</span></div>
-                                            <div class="row g-0 align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="text-dark fw-bold h5 mb-0 me-3"><span>170</span></div>
-                                                </div>
+                    <button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i
+                            class="fas fa-bars"></i></button>
+                    <img src="assets/img/morocco(1).png">
+                    <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group"></div>
+                    </form>
+                    <img src="assets/img/covid-19.png">
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <div class="d-sm-flex justify-content-between align-items-center mb-4"
+                     style="text-align: center;margin: 0px 400px 24px;">
+                    <h3 class="text-dark mb-0" style="text-align: center;"><strong>COVID-19 : tableau de bord de
+                        l’épidémie en chiffres - Maroc</strong><br></h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xl-3 mb-4">
+                        <div class="card shadow border-start-info py-2" style="background: rgb(255, 204, 128);">
+                            <div class="card-body">
+                                <div class="row align-items-center no-gutters">
+                                    <div class="col me-2">
+                                        <div class="text-uppercase text-info fw-bold text-xs mb-1"><span
+                                                style="color: var(--bs-dark);">cas confirmés&nbsp;</span></div>
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-auto">
+                                                <div class="text-dark fw-bold h5 mb-0 me-3"><span
+                                                        id="Total_Cases">170</span></div>
                                             </div>
                                         </div>
-                                        <div class="col-auto"><img src="assets/img/chart.png"></div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow border-start-info py-2" style="background: rgb(154, 229, 154);">
-                                <div class="card-body" style="background: rgb(154, 229, 154);">
-                                    <div class="row align-items-center no-gutters">
-                                        <div class="col me-2">
-                                            <div class="text-uppercase text-info fw-bold text-xs mb-1"><span style="color: var(--bs-dark);">cas guéris</span></div>
-                                            <div class="row g-0 align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="text-dark fw-bold h5 mb-0 me-3"><span>50%</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto"><img src="assets/img/healthcare.png"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow border-start-warning py-2" style="background: rgb(255, 128, 128);">
-                                <div class="card-body">
-                                    <div class="row align-items-center no-gutters">
-                                        <div class="col me-2">
-                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span style="color: var(--bs-dark);">Décès</span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span>23&nbsp;</span></div>
-                                        </div>
-                                        <div class="col-auto"><img src="assets/img/grave(1).png"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-xl-3 mb-4">
-                            <div class="card shadow border-start-warning py-2" style="background: rgb(128, 159, 255);">
-                                <div class="card-body">
-                                    <div class="row align-items-center no-gutters">
-                                        <div class="col me-2">
-                                            <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span style="color: var(--bs-dark);">Personnes vaccinées&nbsp;</span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span>23%</span></div>
-                                        </div>
-                                        <div class="col-auto"><img src="assets/img/syringe.png"></div>
-                                    </div>
+                                    <div class="col-auto"><img src="assets/img/chart.png"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-6 col-xl-3 mb-4">
+                        <div class="card shadow border-start-info py-2" style="background: rgb(154, 229, 154);">
+                            <div class="card-body" style="background: rgb(154, 229, 154);">
+                                <div class="row align-items-center no-gutters">
+                                    <div class="col me-2">
+                                        <div class="text-uppercase text-info fw-bold text-xs mb-1"><span
+                                                style="color: var(--bs-dark);">cas guéris</span></div>
+                                        <div class="row g-0 align-items-center">
+                                            <div class="col-auto">
+                                                <div class="text-dark fw-bold h5 mb-0 me-3"><span
+                                                        id="Total_Deaths">50%</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto"><img src="assets/img/healthcare.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3 mb-4">
+                        <div class="card shadow border-start-warning py-2" style="background: rgb(255, 128, 128);">
+                            <div class="card-body">
+                                <div class="row align-items-center no-gutters">
+                                    <div class="col me-2">
+                                        <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span
+                                                style="color: var(--bs-dark);">Décès</span></div>
+                                        <div class="text-dark fw-bold h5 mb-0"><span
+                                                id="Total_Recoveries">23&nbsp;</span></div>
+                                    </div>
+                                    <div class="col-auto"><img src="assets/img/grave(1).png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-3 mb-4">
+                        <div class="card shadow border-start-warning py-2" style="background: rgb(128, 159, 255);">
+                            <div class="card-body">
+                                <div class="row align-items-center no-gutters">
+                                    <div class="col me-2">
+                                        <div class="text-uppercase text-warning fw-bold text-xs mb-1"><span
+                                                style="color: var(--bs-dark);">Personnes vaccinées&nbsp;</span></div>
+                                        <div class="text-dark fw-bold h5 mb-0"><span id="Total_Vaccines">23%</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto"><img src="assets/img/syringe.png"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <center>
                     <div class="row" style="width: 1362px;">
                         <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-orange);">Evolution des cas confirmés&nbsp;</h6>
-                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-orange);">Evolution des
+                                        cas
+                                        confirmés&nbsp;</h6>
+                                    <div class="dropdown no-arrow">
+                                        <button aria-expanded="false" class="btn btn-link btn-sm dropdown-toggle"
+                                                data-bs-toggle="dropdown" type="button"><i
+                                                class="fas fa-ellipsis-v text-gray-400"></i></button>
                                         <div class="dropdown-menu shadow dropdown-menu-end animated--fade-in">
-                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
-                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a>
+                                            <p class="text-center dropdown-header">dropdown header:</p><a
+                                                class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item"
+                                                                                                  href="#">&nbsp;Another
+                                            action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">&nbsp;Something else here</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                    <div class="chart-area">
+                                        <canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-green);">Evolution des cas guéris</h6>
-                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-green);">Evolution des
+                                        cas
+                                        guéris</h6>
+                                    <div class="dropdown no-arrow">
+                                        <button aria-expanded="false" class="btn btn-link btn-sm dropdown-toggle"
+                                                data-bs-toggle="dropdown" type="button"><i
+                                                class="fas fa-ellipsis-v text-gray-400"></i></button>
                                         <div class="dropdown-menu shadow dropdown-menu-end animated--fade-in">
-                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
-                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a>
+                                            <p class="text-center dropdown-header">dropdown header:</p><a
+                                                class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item"
+                                                                                                  href="#">&nbsp;Another
+                                            action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">&nbsp;Something else here</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                    <div class="chart-area">
+                                        <canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-red);">Evolution des décès&nbsp;</h6>
-                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-red);">Evolution des
+                                        décès&nbsp;</h6>
+                                    <div class="dropdown no-arrow">
+                                        <button aria-expanded="false" class="btn btn-link btn-sm dropdown-toggle"
+                                                data-bs-toggle="dropdown" type="button"><i
+                                                class="fas fa-ellipsis-v text-gray-400"></i></button>
                                         <div class="dropdown-menu shadow dropdown-menu-end animated--fade-in">
-                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
-                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a>
+                                            <p class="text-center dropdown-header">dropdown header:</p><a
+                                                class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item"
+                                                                                                  href="#">&nbsp;Another
+                                            action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">&nbsp;Something else here</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="chart-area" style="border-color: var(--bs-blue);"><canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                    <div class="chart-area" style="border-color: var(--bs-blue);">
+                                        <canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0" style="background: var(--bs-white);color: var(--bs-dark);">Evolution des personnes ayant recu le vaccin&nbsp;</h6>
-                                    <div class="dropdown no-arrow"><button class="btn btn-link btn-sm dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button"><i class="fas fa-ellipsis-v text-gray-400"></i></button>
+                                    <h6 class="text-primary fw-bold m-0"
+                                        style="background: var(--bs-white);color: var(--bs-dark);">Evolution des
+                                        personnes
+                                        ayant recu le vaccin&nbsp;</h6>
+                                    <div class="dropdown no-arrow">
+                                        <button aria-expanded="false" class="btn btn-link btn-sm dropdown-toggle"
+                                                data-bs-toggle="dropdown" type="button"><i
+                                                class="fas fa-ellipsis-v text-gray-400"></i></button>
                                         <div class="dropdown-menu shadow dropdown-menu-end animated--fade-in">
-                                            <p class="text-center dropdown-header">dropdown header:</p><a class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item" href="#">&nbsp;Another action</a>
-                                            <div class="dropdown-divider"></div><a class="dropdown-item" href="#">&nbsp;Something else here</a>
+                                            <p class="text-center dropdown-header">dropdown header:</p><a
+                                                class="dropdown-item" href="#">&nbsp;Action</a><a class="dropdown-item"
+                                                                                                  href="#">&nbsp;Another
+                                            action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">&nbsp;Something else here</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas></div>
+                                    <div class="chart-area">
+                                        <canvas data-bss-chart="{&quot;type&quot;:&quot;line&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Earnings&quot;,&quot;fill&quot;:true,&quot;data&quot;:[&quot;0&quot;,&quot;10000&quot;,&quot;5000&quot;,&quot;15000&quot;,&quot;10000&quot;,&quot;20000&quot;,&quot;15000&quot;,&quot;25000&quot;],&quot;backgroundColor&quot;:&quot;rgba(78, 115, 223, 0.05)&quot;,&quot;borderColor&quot;:&quot;rgba(78, 115, 223, 1)&quot;}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{},&quot;scales&quot;:{&quot;xAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;],&quot;drawOnChartArea&quot;:false},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}],&quot;yAxes&quot;:[{&quot;gridLines&quot;:{&quot;color&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;zeroLineColor&quot;:&quot;rgb(234, 236, 244)&quot;,&quot;drawBorder&quot;:false,&quot;drawTicks&quot;:false,&quot;borderDash&quot;:[&quot;2&quot;],&quot;zeroLineBorderDash&quot;:[&quot;2&quot;]},&quot;ticks&quot;:{&quot;fontColor&quot;:&quot;#858796&quot;,&quot;padding&quot;:20}}]}}}"></canvas>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
-    </div>
-    <h3 class="text-dark mb-0" style="text-align: center;padding: 10px;"><strong>Tableau de répartitions des cas par régions</strong><br></h3>
-    <div class="container-fluid">
-        <div class="card shadow">
-            <div class="card-header py-3">
-                <p class="text-primary m-0 fw-bold" style="text-align: center;color: rgb(33,94,103);">Dernière mise à jour juin 12, 2021 18:00</p>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
-                    <table class="table my-0" id="dataTable">
-                        <thead>
-                            <tr>
-                                <th style="text-align: left;">Région</th>
-                                <th style="text-align: center;">Cas confirmés</th>
-                                <th style="text-align: center;">Cas guéris</th>
-                                <th style="text-align: center;">Décès</th>
-                                <th style="text-align: center;">Vaccinés</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Tanger - Tétouan - Al Hoceima</td>
-                                <td style="text-align: center;">+15<br></td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">41</td>
-                                <td style="text-align: center;">23</td>
-                            </tr>
-                            <tr>
-                                <td>l'Oriental</td>
-                                <td style="text-align: center;">+15<br></td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">41</td>
-                                <td style="text-align: center;">23</td>
-                            </tr>
-                            <tr>
-                                <td>Fès - Meknès</td>
-                                <td style="text-align: center;">+15<br></td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">41</td>
-                                <td style="text-align: center;">23</td>
-                            </tr>
-                            <tr>
-                                <td>Rabat-Salé-Kénitra</td>
-                                <td style="text-align: center;">+15<br></td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">41</td>
-                                <td style="text-align: center;">23</td>
-                            </tr>
-                            <tr>
-                                <td>Béni Mellal-Khénifra</td>
-                                <td style="text-align: center;">+15<br></td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">28</td>
-                                <td style="text-align: center;">23<br></td>
-                            </tr>
-                            <tr>
-                                <td>Casablanca-Settat</td>
-                                <td style="text-align: center;">+15<br></td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">61</td>
-                                <td style="text-align: center;">23<br></td>
-                            </tr>
-                            <tr>
-                                <td>Marrakech-Safi<br></td>
-                                <td style="text-align: center;">+15<br></td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">38</td>
-                                <td style="text-align: center;">23<br></td>
-                            </tr>
-                            <tr>
-                                <td>Drâa-Tafilalet</td>
-                                <td style="text-align: center;">+15<br></td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">21</td>
-                                <td style="text-align: center;">23<br></td>
-                            </tr>
-                            <tr>
-                                <td>Souss-Massa</td>
-                                <td style="text-align: center;">+15<br></td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">46</td>
-                                <td style="text-align: center;">23<br></td>
-                            </tr>
-                            <tr>
-                                <td>Guelmim-Oued Noun</td>
-                                <td style="text-align: center;">+15<br></td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">32</td>
-                                <td style="text-align: center;">23</td>
-                            </tr>
-                            <tr>
-                                <td>Laâyoune-Sakia El Hamra<br></td>
-                                <td style="text-align: center;">+15<br></td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">23</td>
-                            </tr>
-                            <tr>
-                                <td>Dakhla-Oued Ed Dahab</td>
-                                <td style="text-align: center;">+15<br></td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">23</td>
-                                <td style="text-align: center;">22</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr></tr>
-                        </tfoot>
-                    </table>
-                </div>
+                </center>
             </div>
         </div>
     </div>
-    <div id="wrapper">
-        <div class="d-flex flex-column" id="content-wrapper">
-            <div id="content">
-                <h3 class="text-dark mb-0" style="text-align: center;padding: 10px;"><strong>Tableaux de répartitions des cas par villes</strong><br></h3>
-                <div class="container-fluid">
-                    <div class="card shadow mb-5">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card shadow">
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de Tanger-Tétouan-Al Hoceïma</strong><br></p>
-                                        </div>
-                                        <div class="card-header py-3">
-                                            <p class="text-primary m-0 fw-bold"></p>
-                                            <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à jour juin 12, 2021 18:00</strong><br></p>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive table mt-2" id="dataTable-1" role="grid" aria-describedby="dataTable_info">
-                                                <table class="table my-0" id="dataTable">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Ville</th>
-                                                            <th>Cas confirmés</th>
-                                                            <th>Cas guéris</th>
-                                                            <th>Décès</th>
-                                                            <th>Vaccinés</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Tanger - Assilah<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>28</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>M'diq - Fnideq<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>28</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Tétouan<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>28</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Fahs-Anjra<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>28</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Larache<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>61</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Al Hoceïma<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>38</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Chefchaouen<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>21</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Ouezzane<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>46</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                    </tbody>
-                                                    <tfoot>
-                                                        <tr></tr>
-                                                    </tfoot>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de l'Oriental</strong><br></p>
-                                        </div>
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à jour juin 12, 2021 18:00</strong><br></p>
-                                        </div>
-                                        <div class="card-body" style="padding: 25px;">
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Ville</th>
-                                                            <th>Cas confirmés</th>
-                                                            <th>Cas guéris</th>
-                                                            <th>Décès</th>
-                                                            <th>Vaccinés</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Oujda<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Nador<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Driouch<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Jerada<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Berkane<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Taourirt<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Guercif<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Figuig<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="card shadow mb-5">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card shadow">
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp; Fès-Meknès</strong><br></p>
-                                        </div>
-                                        <div class="card-header py-3">
-                                            <p class="text-primary m-0 fw-bold"></p>
-                                            <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à jour juin 12, 2021 18:00</strong><br></p>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive table mt-2" id="dataTable-4" role="grid" aria-describedby="dataTable_info">
-                                                <table class="table my-0" id="dataTable">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Ville</th>
-                                                            <th>Cas confirmés</th>
-                                                            <th>Cas guéris</th>
-                                                            <th>Décès</th>
-                                                            <th>Vaccinés</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Fès<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>66</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Meknès<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>66</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>El Hajeb<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>66</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Ifrane<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>28</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Moulay Yaâcoub<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>61</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Séfrou<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>38</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Boulemane<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>21</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Taounate<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>46</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Taza<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>46</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                    </tbody>
-                                                    <tfoot>
-                                                        <tr></tr>
-                                                    </tfoot>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Rabat-Salé-Kénitra</strong><br></p>
-                                        </div>
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à jour juin 12, 2021 18:00</strong><br></p>
-                                        </div>
-                                        <div class="card-body" style="padding: 25px;">
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Ville</th>
-                                                            <th>Cas confirmés</th>
-                                                            <th>Cas guéris</th>
-                                                            <th>Décès</th>
-                                                            <th>Vaccinés</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Rabat<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Salé<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Skhirate-Témara<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Kénitra<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Khémisset<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Sidi Kacem&nbsp;<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Sidi Slimane<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="card shadow mb-5">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card shadow">
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Béni Mellal-Khénifra</strong>&nbsp;<br></p>
-                                        </div>
-                                        <div class="card-header py-3">
-                                            <p class="text-primary m-0 fw-bold"></p>
-                                            <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à jour juin 12, 2021 18:00</strong><br></p>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive table mt-2" id="dataTable-3" role="grid" aria-describedby="dataTable_info">
-                                                <table class="table my-0" id="dataTable">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Ville</th>
-                                                            <th>Cas confirmés</th>
-                                                            <th>Cas guéris</th>
-                                                            <th>Décès</th>
-                                                            <th>Vaccinés</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Béni-Mellal&nbsp;<br></td>
-                                                            <td>+15</td>
-                                                            <td>23</td>
-                                                            <td>33</td>
-                                                            <td>23</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Azilal<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>47</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Fquih Ben Salah&nbsp;<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>66</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Khénifra<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>28</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Khouribga<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>61</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                    </tbody>
-                                                    <tfoot>
-                                                        <tr></tr>
-                                                    </tfoot>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Drâa-Tafilalet</strong><br></p>
-                                        </div>
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à jour juin 12, 2021 18:00</strong><br></p>
-                                        </div>
-                                        <div class="card-body" style="padding: 25px;">
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Ville</th>
-                                                            <th>Cas confirmés</th>
-                                                            <th>Cas guéris</th>
-                                                            <th>Décès</th>
-                                                            <th>Vaccinés</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Errachidia<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Ouarza-zate</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Midelt<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Tinghir<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Zagora<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="card shadow mb-5">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card shadow">
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de Casablanca-Settat</strong>&nbsp;<br></p>
-                                        </div>
-                                        <div class="card-header py-3">
-                                            <p class="text-primary m-0 fw-bold"></p>
-                                            <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à jour juin 12, 2021 18:00</strong><br></p>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive table mt-2" id="dataTable-2" role="grid" aria-describedby="dataTable_info">
-                                                <table class="table my-0" id="dataTable">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Ville</th>
-                                                            <th>Cas confirmés</th>
-                                                            <th>Cas guéris</th>
-                                                            <th>Décès</th>
-                                                            <th>Vaccinés</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Casablanca<br></td>
-                                                            <td>+15</td>
-                                                            <td>23</td>
-                                                            <td>33</td>
-                                                            <td>23</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Mohammédia<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>47</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>El Jadida&nbsp;<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>66</td>
-                                                            <td>23</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Nouaceur<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>28</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Médiouna&nbsp;<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>61</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Benslimane<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>38</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Berrechid<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>21</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Settat<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>46</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Sidi Bennour&nbsp;<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>46</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                    </tbody>
-                                                    <tfoot>
-                                                        <tr></tr>
-                                                    </tfoot>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Marrakech-Safi</strong><br></p>
-                                        </div>
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à jour juin 12, 2021 18:00</strong><br></p>
-                                        </div>
-                                        <div class="card-body" style="padding: 25px;">
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Ville</th>
-                                                            <th>Cas confirmés</th>
-                                                            <th>Cas guéris</th>
-                                                            <th>Décès</th>
-                                                            <th>Vaccinés</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Marrakech<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Chichaoua<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Al Haouz<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>El Kelaâ des Sraghna<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Essaouira<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Rehamna&nbsp;<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Safi<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Youssoufia<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="card shadow mb-5">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card shadow">
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Souss-Massa</strong><br></p>
-                                        </div>
-                                        <div class="card-header py-3">
-                                            <p class="text-primary m-0 fw-bold"></p>
-                                            <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à jour juin 12, 2021 18:00</strong><br></p>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive table mt-2" id="dataTable-1" role="grid" aria-describedby="dataTable_info">
-                                                <table class="table my-0" id="dataTable">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Ville</th>
-                                                            <th>Cas confirmés</th>
-                                                            <th>Cas guéris</th>
-                                                            <th>Décès</th>
-                                                            <th>Vaccinés</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Agadir Ida-Outanane<br></td>
-                                                            <td>+15</td>
-                                                            <td>23</td>
-                                                            <td>33</td>
-                                                            <td>23</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Inezgane-Aït Melloul&nbsp;<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>47</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Chtouka-Aït Baha&nbsp;<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>66</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Taroudant<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>28</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Tiznit&nbsp;<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>61</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Tata<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>38</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Ouezzane<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>46</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                    </tbody>
-                                                    <tfoot>
-                                                        <tr></tr>
-                                                    </tfoot>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Guelmim-Oued Noun</strong><br></p>
-                                        </div>
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à jour juin 12, 2021 18:00</strong><br></p>
-                                        </div>
-                                        <div class="card-body" style="padding: 25px;">
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Ville</th>
-                                                            <th>Cas confirmés</th>
-                                                            <th>Cas guéris</th>
-                                                            <th>Décès</th>
-                                                            <th>Vaccinés</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Guelmim<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Assa-Zag<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Tan-Tan&nbsp;<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Sidi Ifni&nbsp;<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="card shadow mb-5">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card shadow">
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Laâyoune-Sakia El Hamra</strong><br></p>
-                                        </div>
-                                        <div class="card-header py-3">
-                                            <p class="text-primary m-0 fw-bold"></p>
-                                            <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à jour juin 12, 2021 18:00</strong><br></p>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="table-responsive table mt-2" id="dataTable-5" role="grid" aria-describedby="dataTable_info">
-                                                <table class="table my-0" id="dataTable">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Ville</th>
-                                                            <th>Cas confirmés</th>
-                                                            <th>Cas guéris</th>
-                                                            <th>Décès</th>
-                                                            <th>Vaccinés</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Laâyoune&nbsp;<br></td>
-                                                            <td>+15</td>
-                                                            <td>23</td>
-                                                            <td>33</td>
-                                                            <td>23</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Boujdour&nbsp;<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>47</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Tarfaya&nbsp;<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>66</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Es-Semara<br></td>
-                                                            <td>+15<br></td>
-                                                            <td>23</td>
-                                                            <td>28</td>
-                                                            <td>23<br></td>
-                                                        </tr>
-                                                    </tbody>
-                                                    <tfoot>
-                                                        <tr></tr>
-                                                    </tfoot>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Dakhla-Oued Ed Dahab</strong><br></p>
-                                        </div>
-                                        <div class="card-header py-3">
-                                            <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à jour juin 12, 2021 18:00</strong><br></p>
-                                        </div>
-                                        <div class="card-body" style="padding: 25px;">
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Ville</th>
-                                                            <th>Cas confirmés</th>
-                                                            <th>Cas guéris</th>
-                                                            <th>Décès</th>
-                                                            <th>Vaccinés</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Oued Ed Dahab&nbsp;<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Aousserd<br></td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Text</td>
-                                                            <td>Cell 2</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <footer class="footer-basic">
-                    <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-                    <ul class="list-inline">
-                        <li class="list-inline-item"><a href="#">About</a></li>
-                        <li class="list-inline-item"><a href="#">Terms</a></li>
-                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                    </ul>
-                    <p class="copyright">Company Name © 2021</p>
-                </footer>
+</div>
+<a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+</div>
+<h3 class="text-dark mb-0" style="text-align: center;padding: 10px;"><strong>Tableau de répartitions des cas par
+    régions</strong><br></h3>
+<div class="container-fluid">
+    <div class="card shadow">
+        <div class="card-header py-3">
+            <p class="text-primary m-0 fw-bold" style="text-align: center;color: rgb(33,94,103);">Dernière mise à jour
+                juin 12, 2021 18:00</p>
+        </div>
+        <div class="card-body">
+            <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable" role="grid">
+                <table class="table my-0" id="dataTable">
+                    <thead>
+                    <tr>
+                        <th style="text-align: left;">Région</th>
+                        <th style="text-align: center;">Cas confirmés</th>
+                        <th style="text-align: center;">Cas guéris</th>
+                        <th style="text-align: center;">Décès</th>
+                        <th style="text-align: center;">Vaccinés</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Drâa-Tafilalet</td>
+                        <td id="Region_1_Cases" style="text-align: center;"><br></td>
+                        <td id="Region_1_Recoveries" style="text-align: center;"></td>
+                        <td id="Region_1_Deaths" style="text-align: center;"></td>
+                        <td id="Region_1_Vaccines" style="text-align: center;"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Dakhla-Oued Ed Dahab</td>
+                        <td id="Region_2_Cases" style="text-align: center;"><br></td>
+                        <td id="Region_2_Recoveries" style="text-align: center;"></td>
+                        <td id="Region_2_Deaths" style="text-align: center;"></td>
+                        <td id="Region_2_Vaccines" style="text-align: center;"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Guelmim-Oued Noun</td>
+                        <td id="Region_3_Cases" style="text-align: center;"><br></td>
+                        <td id="Region_3_Recoveries" style="text-align: center;"></td>
+                        <td id="Region_3_Deaths" style="text-align: center;"></td>
+                        <td id="Region_3_Vaccines" style="text-align: center;"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Laâyoune-Sakia El Hamra<br></td>
+                        <td id="Region_4_Cases" style="text-align: center;"><br></td>
+                        <td id="Region_4_Recoveries" style="text-align: center;"></td>
+                        <td id="Region_4_Deaths" style="text-align: center;"></td>
+                        <td id="Region_4_Vaccines" style="text-align: center;"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Béni Mellal-Khénifra</td>
+                        <td id="Region_5_Cases" style="text-align: center;"><br></td>
+                        <td id="Region_5_Recoveries" style="text-align: center;"></td>
+                        <td id="Region_5_Deaths" style="text-align: center;"></td>
+                        <td id="Region_5_Vaccines" style="text-align: center;"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Marrakech-Safi<br></td>
+                        <td id="Region_6_Cases" style="text-align: center;"><br></td>
+                        <td id="Region_6_Recoveries" style="text-align: center;"></td>
+                        <td id="Region_6_Deaths" style="text-align: center;"></td>
+                        <td id="Region_6_Vaccines" style="text-align: center;"><br></td>
+                    </tr>
+                    <tr>
+                        <td>l'Oriental</td>
+                        <td id="Region_7_Cases" style="text-align: center;"><br></td>
+                        <td id="Region_7_Recoveries" style="text-align: center;"></td>
+                        <td id="Region_7_Deaths" style="text-align: center;"></td>
+                        <td id="Region_7_Vaccines" style="text-align: center;"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Rabat-Salé-Kénitra</td>
+                        <td id="Region_8_Cases" style="text-align: center;"><br></td>
+                        <td id="Region_8_Recoveries" style="text-align: center;"></td>
+                        <td id="Region_8_Deaths" style="text-align: center;"></td>
+                        <td id="Region_8_Vaccines" style="text-align: center;"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Souss-Massa</td>
+                        <td id="Region_9_Cases" style="text-align: center;"><br></td>
+                        <td id="Region_9_Recoveries" style="text-align: center;"></td>
+                        <td id="Region_9_Deaths" style="text-align: center;"></td>
+                        <td id="Region_9_Vaccines" style="text-align: center;"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Casablanca-Settat</td>
+                        <td id="Region_10_Cases" style="text-align: center;"><br></td>
+                        <td id="Region_10_Recoveries" style="text-align: center;"></td>
+                        <td id="Region_10_Deaths" style="text-align: center;"></td>
+                        <td id="Region_10_Vaccines" style="text-align: center;"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Fès - Meknès</td>
+                        <td id="Region_11_Cases" style="text-align: center;"><br></td>
+                        <td id="Region_11_Recoveries" style="text-align: center;"></td>
+                        <td id="Region_11_Deaths" style="text-align: center;"></td>
+                        <td id="Region_11_Vaccines" style="text-align: center;"><br></td>
+                    </tr>
+                    <tr>
+                        <td>Tanger - Tétouan - Al Hoceima</td>
+                        <td id="Region_12_Cases" style="text-align: center;"><br></td>
+                        <td id="Region_12_Recoveries" style="text-align: center;"></td>
+                        <td id="Region_12_Deaths" style="text-align: center;"></td>
+                        <td id="Region_12_Vaccines" style="text-align: center;"><br></td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr></tr>
+                    </tfoot>
+                </table>
             </div>
         </div>
     </div>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/chart.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
-    <script src="assets/js/theme.js"></script>
+</div>
+<div id="wrapper">
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <h3 class="text-dark mb-0" style="text-align: center;padding: 10px;"><strong>Tableaux de répartitions des
+                cas par villes</strong><br></h3>
+            <div class="container-fluid">
+                <div class="card shadow mb-5">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card shadow">
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de
+                                            Drâa-Tafilalet</strong><br></p>
+                                    </div>
+                                    <div class="card-header py-3">
+                                        <p class="text-primary m-0 fw-bold"></p>
+                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
+                                            jour juin 12, 2021 18:00</strong><br></p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable-1"
+                                             role="grid">
+                                            <table class="table my-0" id="dataTable">
+                                                <thead>
+                                                <tr>
+                                                    <th>Ville</th>
+                                                    <th>Cas confirmés</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td id="City_45_Name"><br></td>
+                                                    <td id="City_45_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_8_Name"><br></td>
+                                                    <td id="City_8_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_94_Name"><br></td>
+                                                    <td id="City_94_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_1_Name"><br></td>
+                                                    <td id="City_1_Cases"><br></td>
+                                                </tr>
+
+                                                </tbody>
+                                                <tfoot>
+                                                <tr></tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de
+                                            Eddakhla-Oued Eddahab</strong><br></p>
+                                    </div>
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
+                                            jour juin 12, 2021 18:00</strong><br></p>
+                                    </div>
+                                    <div class="card-body" style="padding: 25px;">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Ville</th>
+                                                    <th>Cas confirmés</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td id="City_7_Name"><br></td>
+                                                    <td id="City_7_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_3_Name"><br></td>
+                                                    <td id="City_3_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_49_Name"><br></td>
+                                                    <td id="City_49_Cases"><br></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card shadow">
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Laayoune-Sakia
+                                            El Hamra</strong>&nbsp;<br></p>
+                                    </div>
+                                    <div class="card-header py-3">
+                                        <p class="text-primary m-0 fw-bold"></p>
+                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
+                                            jour juin 12, 2021 18:00</strong><br></p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable-3"
+                                             role="grid">
+                                            <table class="table my-0" id="dataTable">
+                                                <thead>
+                                                <tr>
+                                                    <th>Ville</th>
+                                                    <th>Cas confirmés</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td id="City_13_Name"><br></td>
+                                                    <td id="City_13_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_48_Name"><br></td>
+                                                    <td id="City_48_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_46_Name"><br></td>
+                                                    <td id="City_46_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_9_Name"><br></td>
+                                                    <td id="City_9_Cases"><br></td>
+                                                </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                <tr></tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="card shadow mb-5">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card shadow">
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Beni
+                                            Mellal-Khénifra</strong>&nbsp;<br></p>
+                                    </div>
+                                    <div class="card-header py-3">
+                                        <p class="text-primary m-0 fw-bold"></p>
+                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
+                                            jour juin 12, 2021 18:00</strong><br></p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable-3"
+                                             role="grid">
+                                            <table class="table my-0" id="dataTable">
+                                                <thead>
+                                                <tr>
+                                                    <th>Ville</th>
+                                                    <th>Cas confirmés</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td id="City_63_Name"><br></td>
+                                                    <td id="City_63_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_90_Name"><br></td>
+                                                    <td id="City_90_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_92_Name"><br></td>
+                                                    <td id="City_92_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_34_Name"><br></td>
+                                                    <td id="City_34_Cases"><br></td>
+                                                </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                <tr></tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Marrakech-Safi</strong><br>
+                                        </p>
+                                    </div>
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
+                                            jour juin 12, 2021 18:00</strong><br></p>
+                                    </div>
+                                    <div class="card-body" style="padding: 25px;">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Ville</th>
+                                                    <th>Cas confirmés</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td id="City_11_Name"><br></td>
+                                                    <td id="City_11_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_62_Name"><br></td>
+                                                    <td id="City_62_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_2_Name"><br></td>
+                                                    <td id="City_2_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_86_Name"><br></td>
+                                                    <td id="City_86_Cases"><br></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card shadow">
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Fés-Meknés</strong><br>
+                                        </p>
+                                    </div>
+                                    <div class="card-header py-3">
+                                        <p class="text-primary m-0 fw-bold"></p>
+                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
+                                            jour juin 12, 2021 18:00</strong><br></p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable-5"
+                                             role="grid">
+                                            <table class="table my-0" id="dataTable">
+                                                <thead>
+                                                <tr>
+                                                    <th>Ville</th>
+                                                    <th>Cas confirmés</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td id="City_54_Name"><br></td>
+                                                    <td id="City_54_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_53_Name"><br></td>
+                                                    <td id="City_53_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_77_Name"><br></td>
+                                                    <td id="City_77_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_64_Name"><br></td>
+                                                    <td id="City_64_Cases"><br></td>
+                                                </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                <tr></tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="card shadow mb-5">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card shadow">
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de
+                                            Oriental</strong>&nbsp;<br></p>
+                                    </div>
+                                    <div class="card-header py-3">
+                                        <p class="text-primary m-0 fw-bold"></p>
+                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
+                                            jour juin 12, 2021 18:00</strong><br></p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable-2"
+                                             role="grid">
+                                            <table class="table my-0" id="dataTable">
+                                                <thead>
+                                                <tr>
+                                                    <th>Ville</th>
+                                                    <th>Cas confirmés</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td id="City_55_Name"><br></td>
+                                                    <td id="City_55_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_58_Name"><br></td>
+                                                    <td id="City_58_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_66_Name"><br></td>
+                                                    <td id="City_66_Cases"><br></td>
+                                                </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                <tr></tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Rabat-Salé-Kénitra</strong><br>
+                                        </p>
+                                    </div>
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
+                                            jour juin 12, 2021 18:00</strong><br></p>
+                                    </div>
+                                    <div class="card-body" style="padding: 25px;">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Ville</th>
+                                                    <th>Cas confirmés</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td id="City_51_Name"><br></td>
+                                                    <td id="City_51_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_123_Name"><br></td>
+                                                    <td id="City_123_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_60_Name"><br></td>
+                                                    <td id="City_60_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_70_Name"><br></td>
+                                                    <td id="City_70_Cases"><br></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Tanger-Tétouan-Al
+                                            Hoceima</strong><br></p>
+                                    </div>
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
+                                            jour juin 12, 2021 18:00</strong><br></p>
+                                    </div>
+                                    <div class="card-body" style="padding: 25px;">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Ville</th>
+                                                    <th>Cas confirmés</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td id="City_50_Name"><br></td>
+                                                    <td id="City_50_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_56_Name"><br></td>
+                                                    <td id="City_56_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_59_Name"><br></td>
+                                                    <td id="City_59_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_67_Name"><br></td>
+                                                    <td id="City_67_Cases"><br></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="card shadow mb-5">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card shadow">
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Souss-Massa</strong><br>
+                                        </p>
+                                    </div>
+                                    <div class="card-header py-3">
+                                        <p class="text-primary m-0 fw-bold"></p>
+                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
+                                            jour juin 12, 2021 18:00</strong><br></p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable-1"
+                                             role="grid">
+                                            <table class="table my-0" id="dataTable">
+                                                <thead>
+                                                <tr>
+                                                    <th>Ville</th>
+                                                    <th>Cas confirmés</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td id="City_12_Name"><br></td>
+                                                    <td id="City_12_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_4_Name"><br></td>
+                                                    <td id="City_4_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_6_Name"><br></td>
+                                                    <td id="City_6_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_33_Name"><br></td>
+                                                    <td id="City_33_Cases"><br></td>
+                                                </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                <tr></tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Casablanca-Settat</strong><br>
+                                        </p>
+                                    </div>
+                                    <div class="card-header py-3">
+                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
+                                            jour juin 12, 2021 18:00</strong><br></p>
+                                    </div>
+                                    <div class="card-body" style="padding: 25px;">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th>Ville</th>
+                                                    <th>Cas confirmés</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td id="City_52_Name"><br></td>
+                                                    <td id="City_52_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_83_Name"><br></td>
+                                                    <td id="City_83_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_61_Name"><br></td>
+                                                    <td id="City_61_Cases"><br></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="City_81_Name"><br></td>
+                                                    <td id="City_81_Cases"><br></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer-basic">
+                <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
+                        class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a
+                        href="#"><i class="icon ion-social-facebook"></i></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#">About</a></li>
+                    <li class="list-inline-item"><a href="#">Terms</a></li>
+                    <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                </ul>
+                <p class="copyright">Company Name © 2021</p>
+            </footer>
+        </div>
+    </div>
+</div>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/chart.min.js"></script>
+<script src="assets/js/bs-init.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="JS.js"></script>
 </body>
 
 </html>

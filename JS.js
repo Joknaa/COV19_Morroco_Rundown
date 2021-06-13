@@ -3,6 +3,8 @@ let Statistics02;
 let RegionsStats;
 let Cities;
 
+let Vaccinated_Dates = [];
+let Vaccinated_Counts = [];
 let Cases_Region_Daily = [];
 let Cases_Region_Total = 0;
 let Recoveries_Region_Daily = [];
@@ -19,15 +21,15 @@ let RegionsNames = ["All"];
 let CitiesNames = ["All"];
 let StatsDates = [];
 
-GetDataFromAPI()
-    .then(data => {
-        InitialiseVariables(data)
-    })
-    .then(() => {
-        GenerateSelectMenu("select_Date", StatsDates)
-        GenerateSelectMenu("select_Region", RegionsNames)
-        GenerateSelectMenu("select_City", CitiesNames)
-    })
+GetDataFromAPI().then(data => {
+    InitialiseVariables(data)
+}).then(() => {
+    DisplayUpdatedStats(StatsDates[StatsDates.length - 1])
+})
+
+function GetDates() {
+    return StatsDates;
+}
 
 async function GetDataFromAPI() {
     const response = await fetch("https://cov19api1.herokuapp.com/timeline");
@@ -81,75 +83,72 @@ function InitialiseVariables(data) {
             cases += Attributes["cas_confir"];
         })
         Cases_City_Daily.push(cases);
+
     })
     Cases_City_Total = Cases_City_Daily.reduce(function (a, b) {
         return a + b;
     }, 0);
-    console.log(Cases_City_Daily)
-    console.log(CitiesNames)
+
+
+    let Keys = Object.keys(Statistics01);
+    for (let i = 0; i < Keys.length; i++) {
+        Vaccinated_Dates.push(Keys[i])
+        Vaccinated_Counts.push(Statistics01[Keys[i]])
+    }
+    console.log(Vaccinated_Dates)
+    console.log(Vaccinated_Counts)
+    Cases_City_Total = Cases_City_Daily.reduce(function (a, b) {
+        return a + b;
+    }, 0);
+
 }
 
-function GetStats_Regions_PerDay(Date, Region, City) {
-    document.getElementById("Title").innerHTML = "COVID-19 Stats for:" + Date;
-    document.getElementById("Cases_Total").innerHTML = "Total Cases: " + Cases_Region_Total.toString();
-    document.getElementById("Recoveries_Total").innerHTML = "Total Recoveries: " + Recoveries_Region_Total.toString();
-    document.getElementById("Deaths_Total").innerHTML = "Total Deaths: " + Deaths_Region_Total.toString();
-    GetStats_Regions("Cases", Date, Region);
-    GetStats_Regions("Recoveries", Date, Region);
-    GetStats_Regions("Deaths", Date, Region);
-    GetStats_Cities(Date, City)
+
+let eta_ms = new Date(2021, 6, 13, 13, 35, 20).getTime() - Date.now();
+setTimeout(() => {
+}, 2000);
+
+
+function DisplayUpdatedStats(Date) {
+    let NewVaccinated = Vaccinated_Counts[Vaccinated_Counts.length - 1] - Vaccinated_Counts[Vaccinated_Counts.length - 2];
+    document.getElementById("Total_Cases").innerHTML = Cases_Region_Total.toString() + "(+ " + Cases_Region_Daily[StatsDates.indexOf(Date)] + ")";
+    document.getElementById("Total_Recoveries").innerHTML = Recoveries_Region_Total.toString() + "(+ " + Recoveries_Region_Daily[StatsDates.indexOf(Date)] + ")";
+    document.getElementById("Total_Deaths").innerHTML = Deaths_Region_Total.toString() + "(+ " + Deaths_Region_Daily[StatsDates.indexOf(Date)] + ")";
+    document.getElementById("Total_Vaccines").innerHTML = Vaccinated_Counts[Vaccinated_Counts.length - 1].toString() + "(+" + NewVaccinated + ")";
+    GetStats_Regions(Date);
+    GetStats_Cities(Date)
 }
-function GetStats_Regions(Stat, Date, Region) {
-    document.getElementById(Stat).innerHTML = "";
+
+function GetStats_Regions(Date) {
     Object.keys(RegionsStats).forEach(function (day) {
         if (RegionsStats[day]["date"] === Date) {
 
             let Features = RegionsStats[day]["cas"]["features"];
             Object.keys(Features).forEach(function (attribute) {
                 let Attributes = Features[attribute]["attributes"];
-                if (Region === "All") {
-                    document.getElementById(Stat).innerHTML += Attributes["Nom_Région_FR"] + ": " + Attributes[Stat] + "<br/>";
-                } else if (Region !== "All" && Region === Attributes["Nom_Région_FR"]) {
-                    document.getElementById(Stat).innerHTML += Attributes["Nom_Région_FR"] + ": " + Attributes[Stat] + "<br/>";
-                }
-
+                document.getElementById("Region_" + RegionsNames.indexOf(Attributes["Nom_Région_FR"]) + "_Cases").innerHTML = Attributes["Cases"];
+                document.getElementById("Region_" + RegionsNames.indexOf(Attributes["Nom_Région_FR"]) + "_Recoveries").innerHTML = Attributes["Recoveries"];
+                document.getElementById("Region_" + RegionsNames.indexOf(Attributes["Nom_Région_FR"]) + "_Deaths").innerHTML = Attributes["Deaths"];
+                document.getElementById("Region_" + RegionsNames.indexOf(Attributes["Nom_Région_FR"]) + "_Cases").innerHTML = Attributes["Cases"];
             })
         }
     })
-    let Total_Daily = [];
-    switch (Stat) {
-        case "Cases":
-            Total_Daily = Cases_Region_Daily;
-            break;
-        case "Recoveries":
-            Total_Daily = Recoveries_Region_Daily;
-            break;
-        case "Deaths":
-            Total_Daily = Deaths_Region_Daily;
-            break;
-    }
-    document.getElementById(Stat + "_Sum").innerHTML = Total_Daily[StatsDates.indexOf(Date)].toString();
 }
 
-function GetStats_Cities(Date, City) {
-    document.getElementById("Cases_City").innerHTML = "";
+function GetStats_Cities(Date) {
     Object.keys(Cities).forEach(function (day) {
         if (Cities[day]["date"] === Date) {
-            console.log("correct date")
-            let Features = Cities[day]["cas"]["features"];
-            console.log("correct date")
-            Object.keys(Features).forEach(function (attribute) {
-                let Attributes = Features[attribute]["attributes"];
 
-                if (City === "All") {
-                    console.log("all")
-                    document.getElementById("Cases_City").innerHTML += Attributes["NOM"] + ": " + Attributes["cas_confir"] + "<br/>";
-                } else if (City !== "All" && City === Attributes["NOM"]) {
-                    console.log("notall")
-                    document.getElementById("Cases_City").innerHTML += Attributes["NOM"] + ": " + Attributes["cas_confir"] + "<br/>";
+            let Features = Cities[day]["cas"]["features"];
+            for (let i = 1; i <= Features.length; i++) {
+                let j = i - 1;
+                let City = Features[i - 1]["attributes"];
+
+                if (document.getElementById("City_" + i + "_Name") !== null) {
+                    document.getElementById("City_" + i + "_Name").innerHTML = City["NOM"];
+                    document.getElementById("City_" + i + "_Cases").innerHTML = City["cas_confir"];
                 }
-            })
+            }
         }
     })
-    document.getElementById("Cases_City_Sum").innerHTML = Cases_City_Daily[StatsDates.indexOf(Date)].toString();
 }

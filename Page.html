@@ -11,11 +11,18 @@
         <li id="Cases_Total">Total Cases: </li>
         <li id="Recoveries_Total">Total Recoveries: </li>
         <li id="Deaths_Total">Total Deaths: </li>
+        <br/>
+        <li id="Cases_City_Sum">Last 24h Cases: </li>
+        <li id="Cases_Sum">Last 24h Cases: </li>
+        <li id="Recoveries_Sum">Last 24h Recoveries: </li>
+        <li id="Deaths_Sum">Last 24h Deaths: </li>
+
+
     </ul>
     </div>
 <script src="JS.js"></script>
 <script src="HTMLGenerator.js"></script>
-<button onclick="GetStats_Regions_PerDay(
+<button onclick="DisplayUpdatedStats(
     document.getElementById('select_Date').value,
     document.getElementById('select_Region').value,
     document.getElementById(('select_City').value
@@ -23,22 +30,18 @@
 
 <div>
     <h2>Cases</h2>
-    <h6 id="Cases_City_Sum"></h6>
     <p id="Cases_City"></p>
 </div>
 <div>
     <h2>Cases</h2>
-    <h6 id="Cases_Sum"></h6>
     <p id="Cases"></p>
 </div>
 <div>
     <h2>Recoveries</h2>
-    <h6 id="Recoveries_Sum"></h6>
     <p id="Recoveries"></p>
 </div>
 <div>
     <h2>Deaths</h2>
-    <h6 id="Deaths_Sum"></h6>
     <p id="Deaths"></p>
 </div>
 

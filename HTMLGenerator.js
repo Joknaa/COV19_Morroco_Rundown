@@ -1,10 +1,6 @@
 
 function GenerateSelectMenu(ID, Content){
-    const myParent = document.body;
-
-    const selectList = document.createElement("select");
-    selectList.id = ID;
-    myParent.appendChild(selectList);
+    const selectList = document.getElementById(ID);
 
     for (let i = 0; i < Content.length; i++) {
         let option = document.createElement("option");
