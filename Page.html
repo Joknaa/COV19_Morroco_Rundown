@@ -6,7 +6,7 @@
 </head>
 <body>
 <div>
-    <h1>General Stats: </h1>
+    <h1 id="Title">COVID-19 Stats for:  </h1>
     <ul>
         <li id="Cases_Total">Total Cases: </li>
         <li id="Recoveries_Total">Total Recoveries: </li>
@@ -15,8 +15,17 @@
     </div>
 <script src="JS.js"></script>
 <script src="HTMLGenerator.js"></script>
-<button onclick="GetStats_PerDay(document.getElementById('select_Date').value, document.getElementById('select_Region').value)">Update</button>
+<button onclick="GetStats_Regions_PerDay(
+    document.getElementById('select_Date').value,
+    document.getElementById('select_Region').value,
+    document.getElementById(('select_City').value
+    ))">Update</button>
 
+<div>
+    <h2>Cases</h2>
+    <h6 id="Cases_City_Sum"></h6>
+    <p id="Cases_City"></p>
+</div>
 <div>
     <h2>Cases</h2>
     <h6 id="Cases_Sum"></h6>
