@@ -24,7 +24,7 @@ let StatsDates = [];
 GetDataFromAPI().then(data => {
     InitialiseVariables(data)
 }).then(() => {
-    DisplayUpdatedStats(StatsDates[StatsDates.length - 1])
+    DisplayUpdatedStats(StatsDates[StatsDates.length - 2])
 })
 
 function GetDates() {
@@ -140,11 +140,14 @@ function GetStats_Cities(Date) {
         if (Cities[day]["date"] === Date) {
 
             let Features = Cities[day]["cas"]["features"];
+            console.log(Features)
+
             for (let i = 1; i <= Features.length; i++) {
-                let j = i - 1;
                 let City = Features[i - 1]["attributes"];
+                console.log("test")
 
                 if (document.getElementById("City_" + i + "_Name") !== null) {
+
                     document.getElementById("City_" + i + "_Name").innerHTML = City["NOM"];
                     document.getElementById("City_" + i + "_Cases").innerHTML = City["cas_confir"];
                 }
