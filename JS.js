@@ -1,8 +1,8 @@
+let RawData;
 let Statistics01;
 let Statistics02;
 let RegionsStats;
 let Cities;
-
 let Vaccinated_Dates = [];
 let Vaccinated_Counts = [];
 let Cases_Region_Daily = [];
@@ -20,27 +20,37 @@ let Deaths_City_Total = 0;
 let RegionsNames = ["All"];
 let CitiesNames = ["All"];
 let StatsDates = [];
+let LastUpdatedDay;
 
-GetDataFromAPI().then(data => {
-    InitialiseVariables(data)
-}).then(() => {
-    DisplayUpdatedStats(StatsDates[StatsDates.length - 2])
-})
-
-function GetDates() {
-    return StatsDates;
-}
+GetDataFromAPI()
+    .then(() => {SetupVariables();})
+    .then(() => {DisplayUpdatedStats(LastUpdatedDay)})
 
 async function GetDataFromAPI() {
     const response = await fetch("https://cov19api1.herokuapp.com/timeline");
-    return await response.json();
+    RawData = await response.json();
 }
 
-function InitialiseVariables(data) {
-    Statistics01 = data.timeline.statistics;
-    Statistics02 = data.timeline.statistics2;
-    RegionsStats = data.timeline.Regions;
-    Cities = data.timeline.Villes;
+function SetupVariables() {
+    SetupRegionStats_Daily();
+    SetupRegionStats_Total();
+    SetupCitiesStats_Daily();
+    SetupCitiesStats_Total();
+    SetupVaccineStats();
+    LastUpdatedDay = StatsDates[StatsDates.length - 2];
+}
+
+function DisplayUpdatedStats(Date) {
+    DisplayUpdatesStats_Totals(Date);
+    DisplayUpdatedStats_Regions(Date);
+    DisplayUpdatedStats_Cities(Date);
+
+    DisplayGraphs();
+}
+
+//<editor-fold desc="Extracted">
+function SetupRegionStats_Daily() {
+    RegionsStats = RawData.timeline.Regions;
 
     Object.keys(RegionsStats).forEach(function (day) {
         StatsDates.push(RegionsStats[day]["date"]);
@@ -61,6 +71,8 @@ function InitialiseVariables(data) {
         Recoveries_Region_Daily.push(recoveries);
         Deaths_Region_Daily.push(deaths);
     })
+}
+function SetupRegionStats_Total() {
     Cases_Region_Total = Cases_Region_Daily.reduce(function (a, b) {
         return a + b;
     }, 0);
@@ -70,6 +82,9 @@ function InitialiseVariables(data) {
     Deaths_Region_Total = Deaths_Region_Daily.reduce(function (a, b) {
         return a + b;
     }, 0);
+}
+function SetupCitiesStats_Daily() {
+    Cities = RawData.timeline.Villes;
 
     Object.keys(Cities).forEach(function (day) {
         let cases = 0;
@@ -88,38 +103,30 @@ function InitialiseVariables(data) {
     Cases_City_Total = Cases_City_Daily.reduce(function (a, b) {
         return a + b;
     }, 0);
-
+}
+function SetupCitiesStats_Total() {
+    Cases_City_Total = Cases_City_Daily.reduce(function (a, b) {
+        return a + b;
+    }, 0);
+}
+function SetupVaccineStats() {
+    Statistics01 = RawData.timeline.statistics;
 
     let Keys = Object.keys(Statistics01);
     for (let i = 0; i < Keys.length; i++) {
         Vaccinated_Dates.push(Keys[i])
         Vaccinated_Counts.push(Statistics01[Keys[i]])
     }
-    console.log(Vaccinated_Dates)
-    console.log(Vaccinated_Counts)
-    Cases_City_Total = Cases_City_Daily.reduce(function (a, b) {
-        return a + b;
-    }, 0);
-
 }
 
-
-let eta_ms = new Date(2021, 6, 13, 13, 35, 20).getTime() - Date.now();
-setTimeout(() => {
-}, 2000);
-
-
-function DisplayUpdatedStats(Date) {
+function DisplayUpdatesStats_Totals(Date) {
     let NewVaccinated = Vaccinated_Counts[Vaccinated_Counts.length - 1] - Vaccinated_Counts[Vaccinated_Counts.length - 2];
     document.getElementById("Total_Cases").innerHTML = Cases_Region_Total.toString() + "(+ " + Cases_Region_Daily[StatsDates.indexOf(Date)] + ")";
     document.getElementById("Total_Recoveries").innerHTML = Recoveries_Region_Total.toString() + "(+ " + Recoveries_Region_Daily[StatsDates.indexOf(Date)] + ")";
     document.getElementById("Total_Deaths").innerHTML = Deaths_Region_Total.toString() + "(+ " + Deaths_Region_Daily[StatsDates.indexOf(Date)] + ")";
     document.getElementById("Total_Vaccines").innerHTML = Vaccinated_Counts[Vaccinated_Counts.length - 1].toString() + "(+" + NewVaccinated + ")";
-    GetStats_Regions(Date);
-    GetStats_Cities(Date)
 }
-
-function GetStats_Regions(Date) {
+function DisplayUpdatedStats_Regions(Date) {
     Object.keys(RegionsStats).forEach(function (day) {
         if (RegionsStats[day]["date"] === Date) {
 
@@ -134,20 +141,15 @@ function GetStats_Regions(Date) {
         }
     })
 }
-
-function GetStats_Cities(Date) {
+function DisplayUpdatedStats_Cities(Date) {
     Object.keys(Cities).forEach(function (day) {
         if (Cities[day]["date"] === Date) {
 
             let Features = Cities[day]["cas"]["features"];
-            console.log(Features)
-
             for (let i = 1; i <= Features.length; i++) {
                 let City = Features[i - 1]["attributes"];
-                console.log("test")
 
                 if (document.getElementById("City_" + i + "_Name") !== null) {
-
                     document.getElementById("City_" + i + "_Name").innerHTML = City["NOM"];
                     document.getElementById("City_" + i + "_Cases").innerHTML = City["cas_confir"];
                 }
@@ -155,3 +157,63 @@ function GetStats_Cities(Date) {
         }
     })
 }
+
+function DisplayGraphs() {
+    let last = StatsDates.length - 1;
+    let lastCases = Cases_Region_Daily.length - 1;
+    let lastRecov = Recoveries_Region_Daily.length - 1;
+    let lastDeath = Deaths_Region_Daily.length - 1;
+    let lastVacci = Vaccinated_Counts.length - 1;
+    let Data = [];
+    let name;
+    for (let i = 1; i <= 4; i++) {
+        switch(i) {
+            case 1:
+                name = "Cases";
+                Data = [Cases_Region_Daily[lastCases - 4], Cases_Region_Daily[lastCases - 3], Cases_Region_Daily[lastCases - 2], Cases_Region_Daily[lastCases - 1], Cases_Region_Daily[lastCases]];
+                break;
+            case 2:
+                name = "Guéris";
+                Data = [Recoveries_Region_Daily[lastRecov - 4], Recoveries_Region_Daily[lastRecov - 3], Recoveries_Region_Daily[lastRecov - 2], Recoveries_Region_Daily[lastRecov - 1], Recoveries_Region_Daily[lastRecov]];
+                break;
+            case 3:
+                name = "Décès";
+                Data = [Deaths_Region_Daily[lastDeath - 4], Deaths_Region_Daily[lastDeath - 3], Deaths_Region_Daily[lastDeath - 2], Deaths_Region_Daily[lastDeath - 1], Deaths_Region_Daily[lastDeath]];
+                break;
+            case 4:
+                name = "Vaccinées";
+                Data = [Vaccinated_Counts[lastVacci - 4], Vaccinated_Counts[lastVacci - 3], Vaccinated_Counts[lastVacci - 2], Vaccinated_Counts[lastVacci - 1], Vaccinated_Counts[lastVacci]];
+                break;
+            default:
+        }
+
+        const ctx = document.getElementById('Graph' + i).getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [StatsDates[last - 4], StatsDates[last - 3], StatsDates[last - 2], StatsDates[last - 1], StatsDates[last]],
+                datasets: [{
+                    pointRadius: 4,
+                    label: name,
+                    data: Data,
+                    backgroundColor: [
+                        'rgba(15, 99, 132, 0)'
+                    ],
+                    borderColor: [
+                        'rgba(15, 99, 132, 1)'
+                    ],
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                legend: {display: true},
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+}
+//</editor-fold>

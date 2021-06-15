@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html>
 
@@ -109,27 +108,56 @@
                 </div>
                 <center>
                     <div class="row" style="width: 1362px;">
-                     
+
                         <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-orange);">Evolution des cas confirmés&nbsp;</h6>
-                       
+                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-orange);">Evolution des
+                                        cas confirmés&nbsp;</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas id="myChart1" ></canvas></div>
-                                    <script>
-                                        var ctx = document.getElementById('myChart1').getContext('2d');
+                                        <canvas id="Graph1" height="300"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-green);">Evolution des
+                                        cas guéris</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas id="Graph2" height="300"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-red);">Evolution des
+                                        décès&nbsp;</h6>
 
-                                        var myChart1 = new Chart(ctx, {
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area" style="border-color: var(--bs-blue);">
+                                        <canvas id="Graph3" height="300"></canvas>
+                                    </div>
+                                    <script>
+                                        var ctx = document.getElementById('myChart3').getContext('2d');
+
+
+                                        var myChart3 = new Chart(ctx, {
                                             type: 'line',
                                             data: {
                                                 labels: ['5/16/21', '5/17/21', '5/18/21', '5/19/21', '5/20/21', '5/21/21'],
                                                 datasets: [{
                                                     pointRadius: 4,
-                                                    label: ' Cas ',
-                                                    data: [  479016 , 245100, 479016,245100, 479016],
+                                                    label: ' Deces ',
+                                                    data: [46, 40, 46, 40, 46],
                                                     backgroundColor: [
                                                         'rgba(15, 99, 132, 1)'
                                                     ],
@@ -162,163 +190,27 @@
                         <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-green);">Evolution des cas guéris</h6>
-                                   
+                                    <h6 class="text-primary fw-bold m-0"
+                                        style="background: var(--bs-white);color: var(--bs-dark);">Evolution des
+                                        personnes ayant recu le vaccin&nbsp;</h6>
+
                                 </div>
                                 <div class="card-body">
                                     <div class="chart-area">
-                                        <canvas id="myChart2" ></canvas></div>
-                                        <script>
-                                            var ctx = document.getElementById('myChart2').getContext('2d');
-                                            
-                                    
-                                            var myChart2 = new Chart(ctx, {
-                                                type: 'line',
-                                                data: {
-                                                    labels: ['5/16/21', '5/17/21', '5/18/21', '5/19/21', '5/20/21', '5/21/21'],
-                                                    datasets: [{
-                                                        pointRadius: 4,
-                                                        label: ' Guéris ',
-                                                        data: [83, 90, 83, 90, 83],
-                                                        backgroundColor: [
-                                                        'rgba(15, 99, 132, 1)'                                                    
-                                                        ],
-                                                        borderColor: [
-                                                        'rgba(15, 99, 132, 1)'                                                        
-                                                        ],
-                                                        borderWidth: 1,
-                                                       
-                                                
-                                                    }]
-                                                },
-                                                options: {
-                                                    legend: {display: false},
-                                                    scales: {
-                                                        y: {
-                                                            beginAtZero: true
-                                                        }
-                                                    }
-                                                }
-                                            });
-                                    
-                                    /*        function addvalue(){
-                                                chart.data.labels.push(" bananaa");
-                                                chart.update();
-                                            }*/
-                                            </script>
+                                        <canvas id="Graph4" height="300"></canvas>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
-                        <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
-                            <div class="card shadow mb-4">
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-red);">Evolution des décès&nbsp;</h6>
-                                    
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-area" style="border-color: var(--bs-blue);">
-                                        <canvas id="myChart3" ></canvas></div>
-                                        <script>
-                                            var ctx = document.getElementById('myChart3').getContext('2d');
-                                            
-                                    
-                                            var myChart3 = new Chart(ctx, {
-                                                type: 'line',
-                                                data: {
-                                                    labels: ['5/16/21', '5/17/21', '5/18/21', '5/19/21', '5/20/21', '5/21/21'],
-                                                    datasets: [{
-                                                        pointRadius: 4,
-                                                        label: ' Deces ',
-                                                        data:  [ 46, 40, 46, 40, 46 ],
-                                                        backgroundColor: [
-                                                        'rgba(15, 99, 132, 1)'                                                    
-                                                        ],
-                                                        borderColor: [
-                                                        'rgba(15, 99, 132, 1)'                                                        
-                                                        ],
-                                                        borderWidth: 1,
-                                                       
-                                                
-                                                    }]
-                                                },
-                                                options: {
-                                                    legend: {display: false},
-                                                    scales: {
-                                                        y: {
-                                                            beginAtZero: false
-                                                        }
-                                                    }
-                                                }
-                                            });
-                                    
-                                    /*        function addvalue(){
-                                                chart.data.labels.push(" bananaa");
-                                                chart.update();
-                                            }*/
-                                            </script>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
-                            <div class="card shadow mb-4">
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0" style="background: var(--bs-white);color: var(--bs-dark);">Evolution des personnes ayant recu le vaccin&nbsp;</h6>
-                                   
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myChart4" ></canvas></div>
-                                        <script>
-                                            var ctx = document.getElementById('myChart4').getContext('2d');
-                                            
-                                    
-                                            var myChart4 = new Chart(ctx, {
-                                                type: 'line',
-                                                data: {
-                                                    labels: ['5/16/21', '5/17/21', '5/18/21', '5/19/21', '5/20/21', '5/21/21'],
-                                                    datasets: [{
-                                                        pointRadius: 4,
-                                                        label: ' Vaccinees ',
-                                                        data: [ 11001373 , 11349546, 11703585,12015720, 12015720],
-                                                        backgroundColor: [
-                                                            'rgba(15, 99, 132, 1)'
-                                                    
-                                                        ],
-                                                        borderColor: [
-                                                            'rgba(15, 99, 132, 1)',
-                                                        
-                                                        ],
-                                                        borderWidth: 1,
-                                                       
-                                                
-                                                    }]
-                                                },
-                                                options: {
-                                                    legend: {display: false},
-                                                    scales: {
-                                                        y: {
-                                                            beginAtZero: false
-                                                        }
-                                                    }
-                                                }
-                                            });
-                                    
-                                    /*        function addvalue(){
-                                                chart.data.labels.push(" bananaa");
-                                                chart.update();
-                                            }*/
-                                            </script>
-                                </div>
-                            </div>
-                        </div>
-                   
+
                     </div>
                 </center>
             </div>
         </div>
     </div>
 
-<a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
 </div>
 <h3 class="text-dark mb-0" style="text-align: center;padding: 10px;"><strong>Tableau de répartitions des cas par
     régions</strong><br></h3>
@@ -455,7 +347,8 @@
                                             jour juin 12, 2021 18:00</strong><br></p>
                                     </div>
                                     <div class="card-body">
-                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable-1"
+                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2"
+                                             id="dataTable-1"
                                              role="grid">
                                             <table class="table my-0" id="dataTable">
                                                 <thead>
@@ -541,7 +434,8 @@
                                             jour juin 12, 2021 18:00</strong><br></p>
                                     </div>
                                     <div class="card-body">
-                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable-3"
+                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2"
+                                             id="dataTable-3"
                                              role="grid">
                                             <table class="table my-0" id="dataTable">
                                                 <thead>
@@ -597,7 +491,8 @@
                                             jour juin 12, 2021 18:00</strong><br></p>
                                     </div>
                                     <div class="card-body">
-                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable-3"
+                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2"
+                                             id="dataTable-3"
                                              role="grid">
                                             <table class="table my-0" id="dataTable">
                                                 <thead>
@@ -686,7 +581,8 @@
                                             jour juin 12, 2021 18:00</strong><br></p>
                                     </div>
                                     <div class="card-body">
-                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable-5"
+                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2"
+                                             id="dataTable-5"
                                              role="grid">
                                             <table class="table my-0" id="dataTable">
                                                 <thead>
@@ -741,7 +637,8 @@
                                             jour juin 12, 2021 18:00</strong><br></p>
                                     </div>
                                     <div class="card-body">
-                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable-2"
+                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2"
+                                             id="dataTable-2"
                                              role="grid">
                                             <table class="table my-0" id="dataTable">
                                                 <thead>
@@ -876,7 +773,8 @@
                                             jour juin 12, 2021 18:00</strong><br></p>
                                     </div>
                                     <div class="card-body">
-                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable-1"
+                                        <div aria-describedby="dataTable_info" class="table-responsive table mt-2"
+                                             id="dataTable-1"
                                              role="grid">
                                             <table class="table my-0" id="dataTable">
                                                 <thead>
