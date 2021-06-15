@@ -8,3 +8,7 @@ and with the help and effort of the team members:
 [`Hmouyi Mohamed`](https://github.com/Hmouyi), 
 [`Niama Mouradi`](https://github.com/nianiama), 
 and [`Mohammad Laadidaoui`](https://github.com/Joknaa)
+
+### ScreenShot
+
+![website screenshot](ReadMe_Image.png)
