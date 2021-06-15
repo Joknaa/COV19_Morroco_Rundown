@@ -23,8 +23,12 @@ let StatsDates = [];
 let LastUpdatedDay;
 
 GetDataFromAPI()
-    .then(() => {SetupVariables();})
-    .then(() => {DisplayUpdatedStats(LastUpdatedDay)})
+    .then(() => {
+        SetupVariables();
+    })
+    .then(() => {
+        DisplayUpdatedStats(LastUpdatedDay)
+    })
 
 async function GetDataFromAPI() {
     const response = await fetch("https://cov19api1.herokuapp.com/timeline");
@@ -44,9 +48,90 @@ function DisplayUpdatedStats(Date) {
     DisplayUpdatesStats_Totals(Date);
     DisplayUpdatedStats_Regions(Date);
     DisplayUpdatedStats_Cities(Date);
-
     DisplayGraphs();
 }
+
+//<editor-fold desc="Update at 1000 and 1800">
+let now = new Date();
+let timeTill10OO = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 0, 0, 0) - now;
+let timeTill18OO = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 20, 28, 20, 0) - now;
+
+function Update1000() {
+    if (timeTill10OO < 0) {
+        timeTill10OO += 86400000;
+
+        GetDataFromAPI()
+            .then(() => {
+                SetupVariables();
+            })
+            .then(() => {
+                DisplayUpdatedStats(LastUpdatedDay)
+            })
+            .then(() => {
+                let items = document.getElementsByClassName("UpdateDate");
+                Object.keys(items).forEach((item) => {
+                    items[item].innerHTML = "Dernière mise à jour: " + StatsDates[StatsDates.length - 1] + (timeTill18OO > timeTill10OO ? " - 18:00" : " - 10:00");
+                })
+            })
+
+    } else {
+        alert("There is an update ! Please refresh the page")
+        GetDataFromAPI()
+            .then(() => {
+                SetupVariables();
+            })
+            .then(() => {
+                DisplayUpdatedStats(LastUpdatedDay)
+            })
+            .then(() => {
+                let items = document.getElementsByClassName("UpdateDate");
+                Object.keys(items).forEach((item) => {
+                    items[item].innerHTML = "Dernière mise à jour: " + StatsDates[StatsDates.length - 1] + (timeTill18OO > timeTill10OO ? " - 18:00" : " - 10:00");
+                })
+            })
+    }
+
+}
+
+function Update1800() {
+    if (timeTill18OO < 0) {
+        timeTill18OO += 86400000;
+
+        GetDataFromAPI()
+            .then(() => {
+                SetupVariables();
+            })
+            .then(() => {
+                DisplayUpdatedStats(LastUpdatedDay)
+            })
+            .then(() => {
+                let items = document.getElementsByClassName("UpdateDate");
+                Object.keys(items).forEach((item) => {
+                    items[item].innerHTML = "Dernière mise à jour: " + StatsDates[StatsDates.length - 1] + (timeTill18OO > timeTill10OO ? " - 18:00" : " - 10:00");
+                })
+            })
+    } else {
+        alert("There is an update ! Please refresh the page")
+        GetDataFromAPI()
+            .then(() => {
+                SetupVariables();
+            })
+            .then(() => {
+                DisplayUpdatedStats(LastUpdatedDay)
+            })
+            .then(() => {
+                let items = document.getElementsByClassName("UpdateDate");
+                Object.keys(items).forEach((item) => {
+                    items[item].innerHTML = "Dernière mise à jour: " + StatsDates[StatsDates.length - 1] + (timeTill18OO > timeTill10OO ? " - 18:00" : " - 10:00");
+                })
+            })
+    }
+}
+
+setTimeout(Update1000, timeTill10OO)
+setTimeout(Update1800, timeTill18OO)
+
+//</editor-fold>
 
 //<editor-fold desc="Extracted">
 function SetupRegionStats_Daily() {
@@ -72,6 +157,7 @@ function SetupRegionStats_Daily() {
         Deaths_Region_Daily.push(deaths);
     })
 }
+
 function SetupRegionStats_Total() {
     Cases_Region_Total = Cases_Region_Daily.reduce(function (a, b) {
         return a + b;
@@ -83,6 +169,7 @@ function SetupRegionStats_Total() {
         return a + b;
     }, 0);
 }
+
 function SetupCitiesStats_Daily() {
     Cities = RawData.timeline.Villes;
 
@@ -104,11 +191,13 @@ function SetupCitiesStats_Daily() {
         return a + b;
     }, 0);
 }
+
 function SetupCitiesStats_Total() {
     Cases_City_Total = Cases_City_Daily.reduce(function (a, b) {
         return a + b;
     }, 0);
 }
+
 function SetupVaccineStats() {
     Statistics01 = RawData.timeline.statistics;
 
@@ -126,6 +215,7 @@ function DisplayUpdatesStats_Totals(Date) {
     document.getElementById("Total_Deaths").innerHTML = Deaths_Region_Total.toString() + "(+ " + Deaths_Region_Daily[StatsDates.indexOf(Date)] + ")";
     document.getElementById("Total_Vaccines").innerHTML = Vaccinated_Counts[Vaccinated_Counts.length - 1].toString() + "(+" + NewVaccinated + ")";
 }
+
 function DisplayUpdatedStats_Regions(Date) {
     Object.keys(RegionsStats).forEach(function (day) {
         if (RegionsStats[day]["date"] === Date) {
@@ -141,6 +231,7 @@ function DisplayUpdatedStats_Regions(Date) {
         }
     })
 }
+
 function DisplayUpdatedStats_Cities(Date) {
     Object.keys(Cities).forEach(function (day) {
         if (Cities[day]["date"] === Date) {
@@ -167,7 +258,7 @@ function DisplayGraphs() {
     let Data = [];
     let name;
     for (let i = 1; i <= 4; i++) {
-        switch(i) {
+        switch (i) {
             case 1:
                 name = "Cases";
                 Data = [Cases_Region_Daily[lastCases - 4], Cases_Region_Daily[lastCases - 3], Cases_Region_Daily[lastCases - 2], Cases_Region_Daily[lastCases - 1], Cases_Region_Daily[lastCases]];
@@ -216,4 +307,6 @@ function DisplayGraphs() {
         });
     }
 }
+
 //</editor-fold>
+

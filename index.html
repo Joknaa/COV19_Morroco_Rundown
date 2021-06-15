@@ -31,11 +31,13 @@
                 </div>
             </nav>
             <div class="container-fluid">
-                <div class="d-sm-flex justify-content-between align-items-center mb-4"
-                     style="text-align: center;margin: 0px 400px 24px;">
-                    <h3 class="text-dark mb-0" style="text-align: center;"><strong>COVID-19 : tableau de bord de
-                        l’épidémie en chiffres - Maroc</strong><br></h3>
-                </div>
+                <center>
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4"
+                         style="text-align: center;margin: 0px 400px 24px;">
+                        <h3 class="text-dark mb-0"><strong>COVID-19 : tableau de bord de
+                            l’épidémie en chiffres - Maroc</strong><br></h3>
+                    </div>
+                </center>
                 <div class="row">
                     <div class="col-md-6 col-xl-3 mb-4">
                         <div class="card shadow border-start-info py-2" style="background: rgb(255, 204, 128);">
@@ -107,103 +109,59 @@
                     </div>
                 </div>
                 <center>
-                    <div class="row" style="width: 1362px;">
-
-                        <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
+                    <div class="row" style="width: 1880px;">
+                        <div class="col" style="width: 292.25px; height: 500px; margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
                                     <h6 class="text-primary fw-bold m-0" style="color: var(--bs-orange);">Evolution des
                                         cas confirmés&nbsp;</h6>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body" style="height: 450px;">
                                     <div class="chart-area">
-                                        <canvas id="Graph1" height="300"></canvas>
+                                        <canvas height="300" id="Graph1"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
+                        <div class="col" style="width: 292.25px; height: 500px; margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-green);">Evolution des
-                                        cas guéris</h6>
+                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-orange);">Evolution des
+                                        cas gueris&nbsp;</h6>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body" style="height: 450px;">
                                     <div class="chart-area">
-                                        <canvas id="Graph2" height="300"></canvas>
+                                        <canvas height="300" id="Graph2"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
+                        <div class="col" style="width: 292.25px; height: 500px; margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-red);">Evolution des
-                                        décès&nbsp;</h6>
-
+                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-orange);">Evolution des
+                                        cas deces&nbsp;</h6>
                                 </div>
-                                <div class="card-body">
-                                    <div class="chart-area" style="border-color: var(--bs-blue);">
-                                        <canvas id="Graph3" height="300"></canvas>
+                                <div class="card-body" style="height: 450px;">
+                                    <div class="chart-area">
+                                        <canvas height="300" id="Graph3"></canvas>
                                     </div>
-                                    <script>
-                                        var ctx = document.getElementById('myChart3').getContext('2d');
-
-
-                                        var myChart3 = new Chart(ctx, {
-                                            type: 'line',
-                                            data: {
-                                                labels: ['5/16/21', '5/17/21', '5/18/21', '5/19/21', '5/20/21', '5/21/21'],
-                                                datasets: [{
-                                                    pointRadius: 4,
-                                                    label: ' Deces ',
-                                                    data: [46, 40, 46, 40, 46],
-                                                    backgroundColor: [
-                                                        'rgba(15, 99, 132, 1)'
-                                                    ],
-                                                    borderColor: [
-                                                        'rgba(15, 99, 132, 1)'
-                                                    ],
-                                                    borderWidth: 1,
-
-
-                                                }]
-                                            },
-                                            options: {
-                                                legend: {display: false},
-                                                scales: {
-                                                    y: {
-                                                        beginAtZero: false
-                                                    }
-                                                }
-                                            }
-                                        });
-
-                                        /*        function addvalue(){
-                                                    chart.data.labels.push(" bananaa");
-                                                    chart.update();
-                                                }*/
-                                    </script>
                                 </div>
                             </div>
                         </div>
-                        <div class="col" style="width: 292.25px;margin: 0px 0px 24px;">
+                        <div class="col" style="width: 292.25px; height: 500px; margin: 0px 0px 24px;">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
-                                    <h6 class="text-primary fw-bold m-0"
-                                        style="background: var(--bs-white);color: var(--bs-dark);">Evolution des
+                                    <h6 class="text-primary fw-bold m-0" style="color: var(--bs-orange);">Evolution des
                                         personnes ayant recu le vaccin&nbsp;</h6>
-
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body" style="height: 450px;">
                                     <div class="chart-area">
-                                        <canvas id="Graph4" height="300"></canvas>
+                                        <canvas height="300" id="Graph4"></canvas>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </center>
             </div>
@@ -217,8 +175,7 @@
 <div class="container-fluid">
     <div class="card shadow">
         <div class="card-header py-3">
-            <p class="text-primary m-0 fw-bold" style="text-align: center;color: rgb(33,94,103);">Dernière mise à jour
-                juin 12, 2021 18:00</p>
+            <p class="UpdateDate" style="text-align: center;color: rgb(33,94,103);"></p>
         </div>
         <div class="card-body">
             <div aria-describedby="dataTable_info" class="table-responsive table mt-2" id="dataTable" role="grid">
@@ -342,9 +299,7 @@
                                             Drâa-Tafilalet</strong><br></p>
                                     </div>
                                     <div class="card-header py-3">
-                                        <p class="text-primary m-0 fw-bold"></p>
-                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
-                                            jour juin 12, 2021 18:00</strong><br></p>
+                                        <p class="UpdateDate" style="color: rgb(33,94,103);text-align: center;"><strong></strong><br></p>
                                     </div>
                                     <div class="card-body">
                                         <div aria-describedby="dataTable_info" class="table-responsive table mt-2"
@@ -391,8 +346,7 @@
                                             Eddakhla-Oued Eddahab</strong><br></p>
                                     </div>
                                     <div class="card-header py-3">
-                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
-                                            jour juin 12, 2021 18:00</strong><br></p>
+                                        <p class="UpdateDate"   style="color: rgb(33,94,103);text-align: center;"><strong></strong><br></p>
                                     </div>
                                     <div class="card-body" style="padding: 25px;">
                                         <div class="table-responsive">
@@ -429,9 +383,7 @@
                                             El Hamra</strong>&nbsp;<br></p>
                                     </div>
                                     <div class="card-header py-3">
-                                        <p class="text-primary m-0 fw-bold"></p>
-                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
-                                            jour juin 12, 2021 18:00</strong><br></p>
+                                        <p class="UpdateDate" style="color: rgb(33,94,103);text-align: center;"><strong></strong><br></p>
                                     </div>
                                     <div class="card-body">
                                         <div aria-describedby="dataTable_info" class="table-responsive table mt-2"
@@ -486,9 +438,7 @@
                                             Mellal-Khénifra</strong>&nbsp;<br></p>
                                     </div>
                                     <div class="card-header py-3">
-                                        <p class="text-primary m-0 fw-bold"></p>
-                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
-                                            jour juin 12, 2021 18:00</strong><br></p>
+                                        <p class="UpdateDate" style="color: rgb(33,94,103);text-align: center;"><strong></strong><br></p>
                                     </div>
                                     <div class="card-body">
                                         <div aria-describedby="dataTable_info" class="table-responsive table mt-2"
@@ -534,8 +484,7 @@
                                         </p>
                                     </div>
                                     <div class="card-header py-3">
-                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
-                                            jour juin 12, 2021 18:00</strong><br></p>
+                                        <p class="UpdateDate" style="color: rgb(33,94,103);text-align: center;"><strong></strong><br></p>
                                     </div>
                                     <div class="card-body" style="padding: 25px;">
                                         <div class="table-responsive">
@@ -576,9 +525,7 @@
                                         </p>
                                     </div>
                                     <div class="card-header py-3">
-                                        <p class="text-primary m-0 fw-bold"></p>
-                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
-                                            jour juin 12, 2021 18:00</strong><br></p>
+                                        <p class="UpdateDate" style="color: rgb(33,94,103);text-align: center;"><strong></strong><br></p>
                                     </div>
                                     <div class="card-body">
                                         <div aria-describedby="dataTable_info" class="table-responsive table mt-2"
@@ -632,9 +579,7 @@
                                             Oriental</strong>&nbsp;<br></p>
                                     </div>
                                     <div class="card-header py-3">
-                                        <p class="text-primary m-0 fw-bold"></p>
-                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
-                                            jour juin 12, 2021 18:00</strong><br></p>
+                                        <p class="UpdateDate" style="color: rgb(33,94,103);text-align: center;"><strong></strong><br></p>
                                     </div>
                                     <div class="card-body">
                                         <div aria-describedby="dataTable_info" class="table-responsive table mt-2"
@@ -672,12 +617,11 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-header py-3">
-                                        <p style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Rabat-Salé-Kénitra</strong><br>
+                                        <p class="UpdateDate" style="color: rgb(98,168,179);text-align: center;"><strong>Région de&nbsp;Rabat-Salé-Kénitra</strong><br>
                                         </p>
                                     </div>
                                     <div class="card-header py-3">
-                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
-                                            jour juin 12, 2021 18:00</strong><br></p>
+                                        <p class="table my-0" style="color: rgb(33,94,103);text-align: center;"><strong></strong><br></p>
                                     </div>
                                     <div class="card-body" style="padding: 25px;">
                                         <div class="table-responsive">
@@ -718,8 +662,7 @@
                                             Hoceima</strong><br></p>
                                     </div>
                                     <div class="card-header py-3">
-                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
-                                            jour juin 12, 2021 18:00</strong><br></p>
+                                        <p class="table my-0" style="color: rgb(33,94,103);text-align: center;"><strong></strong><br></p>
                                     </div>
                                     <div class="card-body" style="padding: 25px;">
                                         <div class="table-responsive">
@@ -768,9 +711,7 @@
                                         </p>
                                     </div>
                                     <div class="card-header py-3">
-                                        <p class="text-primary m-0 fw-bold"></p>
-                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
-                                            jour juin 12, 2021 18:00</strong><br></p>
+                                        <p class="UpdateDate" style="color: rgb(33,94,103);text-align: center;"><strong></strong><br></p>
                                     </div>
                                     <div class="card-body">
                                         <div aria-describedby="dataTable_info" class="table-responsive table mt-2"
@@ -816,8 +757,7 @@
                                         </p>
                                     </div>
                                     <div class="card-header py-3">
-                                        <p style="color: rgb(33,94,103);text-align: center;"><strong>Dernière mise à
-                                            jour juin 12, 2021 18:00</strong><br></p>
+                                        <p class="UpdateDate" style="color: rgb(33,94,103);text-align: center;"><strong></strong><br></p>
                                     </div>
                                     <div class="card-body" style="padding: 25px;">
                                         <div class="table-responsive">
